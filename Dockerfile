@@ -1,6 +1,9 @@
 # Etapa 1: Usar uma imagem com JDK 21
 FROM openjdk:21-jdk-slim AS build
 
+# Instalar o Maven
+RUN apt-get update && apt-get install -y maven
+
 # Definir o diretório de trabalho
 WORKDIR /app
 
